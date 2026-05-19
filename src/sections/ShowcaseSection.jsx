@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { projects } from "../constants";
 import ProjectModal from "../components/ProjectModal";
+import TitleHeader from "../components/TitleHeader";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -55,52 +56,49 @@ const AppShowcase = () => {
     setSelectedProject(null);
   };
 
-  const featuredProject = projects.find(project => project.featured);
-  const otherProjects = projects.filter(project => !project.featured);
-  const leftSideProjects = otherProjects.slice(0, 2);
-  const rightSideProjects = otherProjects.slice(2);
+  const spotlightProjectIds = [
+    "ai-insight-sofien-bank",
+    "logistics-ai-copilot",
+    "ryde",
+  ];
+  const spotlightProjects = spotlightProjectIds
+    .map((id) => projects.find((project) => project.id === id))
+    .filter(Boolean);
+  const rightSideProjects = projects.filter(
+    (project) => !spotlightProjectIds.includes(project.id)
+  );
 
   return (
-    <div id="work" ref={sectionRef} className="app-showcase">
+    <div id="work" ref={sectionRef} className="app-showcase relative z-10">
       <div className="w-full">
+        <TitleHeader
+          title="Featured Projects"
+          sub="Data & AI Solutions"
+        />
         <div className="showcaselayout">
-          {/* Featured Project */}
-          <div 
-            ref={el => projectRefs.current[0] = el} 
-            className="first-project-wrapper"
-          >
-            <div className="image-wrapper">
-              <img src={featuredProject.imgPath} alt={featuredProject.alt} />
-            </div>
-            <div className="text-content">
-              <h2>{featuredProject.title}</h2>
-              <p className="text-white-50 md:text-xl">
-                {featuredProject.description}
-              </p>
-              <button
-                onClick={() => handleShowProject(featuredProject)}
-                className="mt-4 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200 font-medium"
-              >
-                See Full Project
-              </button>
-            </div>
-
-            {leftSideProjects.map((project, index) => (
+          {/* Spotlight Projects */}
+          <div className="first-project-wrapper">
+            {spotlightProjects.map((project, index) => (
               <div
                 key={project.id}
-                ref={el => projectRefs.current[index + 1] = el}
-                className="mt-10 project"
+                ref={el => projectRefs.current[index] = el}
+                className={index === 0 ? "" : "mt-10"}
               >
-                <div className="image-wrapper bg-[#FFEFDB]">
+                <div className="image-wrapper rounded-2xl border-2 border-cyan-500/20 shadow-[0_0_30px_rgba(34,211,238,0.1)]">
                   <img src={project.imgPath} alt={project.alt} />
                 </div>
-                <h2>{project.title}</h2>
-                <button
-                  onClick={() => handleShowProject(project)}
-                  className="mt-3 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200 text-sm font-medium"
-                >
-                  See Full Project
-                </button>
+                <div className="text-content">
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">{project.title}</h2>
+                  <p className="text-white-50 md:text-xl text-lg">
+                    {project.description}
+                  </p>
+                  <button
+                    onClick={() => handleShowProject(project)}
+                    className="mt-6 px-8 py-4 bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 hover:from-cyan-500 hover:via-blue-500 hover:to-purple-500 text-white rounded-xl transition-all duration-300 font-bold text-lg shadow-[0_0_30px_rgba(34,211,238,0.3)]"
+                  >
+                    See Full Project
+                  </button>
+                </div>
               </div>
             ))}
           </div>
@@ -111,15 +109,15 @@ const AppShowcase = () => {
               <div 
                 key={project.id} 
                 className="project" 
-                ref={el => projectRefs.current[index + 1 + leftSideProjects.length] = el}
+                ref={el => projectRefs.current[index + spotlightProjects.length] = el}
               >
-                <div className="image-wrapper bg-[#FFEFDB]">
+                <div className="image-wrapper bg-[#FFEFDB] rounded-xl border-2 border-cyan-500/20">
                   <img src={project.imgPath} alt={project.alt} />
                 </div>
-                <h2>{project.title}</h2>
+                <h2 className="text-xl md:text-2xl font-semibold">{project.title}</h2>
                 <button
                   onClick={() => handleShowProject(project)}
-                  className="mt-3 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200 text-sm font-medium"
+                  className="mt-4 px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white rounded-xl transition-all duration-300 font-semibold text-base"
                 >
                   See Full Project
                 </button>

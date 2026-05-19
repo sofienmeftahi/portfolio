@@ -27,9 +27,9 @@ const Button = ({ text, className, id }) => {
       }}
       className={`${className ?? ""} cta-wrapper`} // Add base + extra class names
     >
-      <div className="cta-button group">
+      <div className="cta-button group bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 hover:from-cyan-500 hover:via-blue-500 hover:to-purple-500 shadow-[0_0_30px_rgba(34,211,238,0.3)] hover:shadow-[0_0_50px_rgba(34,211,238,0.5)] transition-all duration-300">
         <div className="bg-circle" />
-        <p className="text">{text}</p>
+        <p className="text font-bold">{text}</p>
         <div className="arrow-wrapper">
           <img src="/images/arrow-down.svg" alt="arrow" />
         </div>

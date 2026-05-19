@@ -69,28 +69,27 @@ const TechStack = () => {
     <div id="skills" className="flex-center section-padding">
       <div className="w-full h-full md:px-10 px-5">
         <TitleHeader
-          title="How I Can Contribute & My Key Skills"
-          sub="🤝 What I Bring to the Table"
+          title="AI & Data Skills"
+          sub="Tools & Technologies"
         />
         <div className="tech-grid">
           {techStackIcons.map((techStackIcon, idx) => (
             <div
               key={techStackIcon.name}
-              className="card-border tech-card overflow-hidden group xl:rounded-full rounded-lg flex flex-col items-center p-6 bg-black-100"
+              className="card-border tech-card overflow-hidden group xl:rounded-full rounded-xl flex flex-col items-center p-8 bg-black-100 border-2 border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 shadow-[0_0_20px_rgba(34,211,238,0.1)] hover:shadow-[0_0_40px_rgba(34,211,238,0.2)]"
             >
-              <div className="tech-card-animated-bg" />
+              <div className="tech-card-animated-bg bg-gradient-to-t from-cyan-500/20 to-transparent" />
               <div className="tech-card-content flex flex-col items-center">
-                <div className="tech-icon-wrapper mb-4" style={{minHeight: '180px', minWidth: '180px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                  <img src={techStackIcon.icon} alt={techStackIcon.name} className="w-40 h-40 object-contain" />
+                <div className="tech-icon-wrapper mb-4" style={{minHeight: '150px', minWidth: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                  <img src={techStackIcon.icon} alt={techStackIcon.name} className="w-32 h-32 object-contain" />
                 </div>
-                <p className="font-bold text-lg mb-2 text-center">{techStackIcon.name}</p>
+                <p className="font-bold text-lg md:text-xl mb-2 text-center text-white">{techStackIcon.name}</p>
               </div>
             </div>
           ))}
         </div>
         <div className="mt-10 text-center">
-          <span className="font-bold">🛠️ Tech Stack:</span><br/>
-          Python · SQL · Power BI · Excel · Pandas · Numpy · Scikit-learn · Git · Jupyter Notebooks
+         
         </div>
       </div>
     </div>

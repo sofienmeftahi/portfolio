@@ -101,8 +101,8 @@ const Experience = () => {
     >
       <div className="w-full h-full md:px-20 px-5">
         <TitleHeader
-          title="Professional Work Experience"
-          sub="💼 My Career Overview"
+          title="Professional Experience"
+          sub="My Career Journey"
         />
         <div className="mt-32 relative">
           <div className="relative z-50 xl:space-y-32 space-y-10">
@@ -126,14 +126,14 @@ const Experience = () => {
                         <img src={card.logoPath} alt="logo" />
                       </div>
                       <div>
-                        <h1 className="font-semibold text-3xl">{card.title}</h1>
-                        <p className="my-5 text-white-50">
-                          🗓️&nbsp;{card.date}
+                        <h1 className="font-bold text-2xl md:text-3xl bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">{card.title}</h1>
+                        <p className="my-4 text-lg text-white-50">
+                          {card.date}
                         </p>
-                        <p className="text-[#839CB5] italic">
+                        <p className="text-cyan-300 italic text-lg font-semibold">
                           Responsibilities
                         </p>
-                        <ul className="list-disc ms-5 mt-5 flex flex-col gap-5 text-white-50">
+                        <ul className="list-disc ms-5 mt-4 flex flex-col gap-4 text-white-50">
                           {card.responsibilities.map(
                             (responsibility, index) => (
                               <li key={index} className="text-lg">

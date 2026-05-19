@@ -1,4 +1,6 @@
 import { useRef } from "react";
+// 1. استيراد دالة تصحيح المسار. تأكد من صحة المسار النسبي لملف pathUtils.js
+import { correctPath } from "../utils/pathUtils"; 
 
 const GlowCard = ({ card, index, children }) => {
   // refs for all the cards
@@ -35,7 +37,8 @@ const GlowCard = ({ card, index, children }) => {
       <div className="glow"></div>
       <div className="flex items-center gap-1 mb-5">
         {Array.from({ length: 5 }, (_, i) => (
-          <img key={i} src="/images/star.png" alt="star" className="size-5" />
+          // 2. تطبيق correctPath على مسار الصورة
+          <img key={i} src={correctPath("/images/star.png")} alt="star" className="size-5" />
         ))}
       </div>
       <div className="mb-5">

@@ -1,8 +1,11 @@
 import { useGLTF } from "@react-three/drei";
-
+// 1. استيراد دالة تصحيح المسار. تأكد من صحة المسار النسبي لملف pathUtils.js
+import { correctPath } from "../../../utils/pathUtils";
+// مثال للاستيراد الصحيح
 export function Computer(props) {
+  // 2. تطبيق correctPath على مسار النموذج
   const { nodes, materials } = useGLTF(
-    "/models/computer-optimized-transformed.glb"
+    correctPath("/models/computer-optimized-transformed.glb")
   );
 
   return (
@@ -25,6 +28,7 @@ export function Computer(props) {
   );
 }
 
-useGLTF.preload("/models/computer-optimized-transformed.glb");
+// 3. تطبيق correctPath على دالة التحميل المسبق (Preload)
+useGLTF.preload(correctPath("/models/computer-optimized-transformed.glb"));
 
 export default Computer;

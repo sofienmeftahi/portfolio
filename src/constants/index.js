@@ -31,46 +31,15 @@ const words = [
 ];
 
 const counterItems = [
-  { value: 2, suffix: "+", label: "Years of Experience" },
-  { value: 10, suffix: "+", label: "Satisfied Clients" },
-  { value: 9, suffix: "+", label: "Completed Projects" },
-  { value: 90, suffix: "%", label: "Client Retention Rate" },
+  { value: 4, suffix: "+", label: "Years of Experience" },
+
+  { value: 10, suffix: "+", label: " Projects" },
+
 ];
 
 const logoIconsList = [
-  {
-    imgPath: correctPath("/images/logos/company-logo-1.png"),
-  },
-  {
-    imgPath: correctPath("/images/logos/company-logo-2.png"),
-  },
-  {
-    imgPath: correctPath("/images/logos/company-logo-3.png"),
-  },
-  {
-    imgPath: correctPath("/images/logos/company-logo-4.png"),
-  },
-  {
-    imgPath: correctPath("/images/logos/company-logo-5.png"),
-  },
-  {
-    imgPath: correctPath("/images/logos/company-logo-6.png"),
-  },
-  {
-    imgPath: correctPath("/images/logos/company-logo-7.png"),
-  },
-  {
-    imgPath: correctPath("/images/logos/company-logo-8.png"),
-  },
-  {
-    imgPath: correctPath("/images/logos/company-logo-9.png"),
-  },
-  {
-    imgPath: correctPath("/images/logos/company-logo-10.png"),
-  },
-  {
-    imgPath: correctPath("/images/logos/company-logo-11.png"),
-  },
+  
+
 ];
 
 const abilities = [
@@ -93,79 +62,91 @@ const abilities = [
 
 const techStackImgs = [
   {
-    name: "React Developer",
-    imgPath: correctPath("/images/logos/react.png"),
+    name: "Microsoft Fabric",
+    imgPath: correctPath("/images/logos/data.webp"),
   },
   {
-    name: "Python Developer",
+    name: "Power BI",
+    imgPath: correctPath("/images/logos/Power_BI.webp"),
+  },
+  {
+    name: "Python",
     imgPath: correctPath("/images/logos/python.svg"),
   },
   {
-    name: "Backend Developer",
-    imgPath: correctPath("/images/logos/node.png"),
+    name: "SQL",
+    imgPath: correctPath("/images/logos/Sql.png"),
   },
   {
-    name: "Interactive Developer",
-    imgPath: correctPath("/images/logos/three.png"),
-  },
-  {
-    name: "Project Manager",
-    imgPath: correctPath("/images/logos/git.svg"),
+    name: "AI & Machine Learning",
+    imgPath: correctPath("/images/logos/ML.jpg"),
   },
 ];
 const techStackIcons = [
   {
-    name: "Data Analyst — Excel, Google Sheets, Python (Pandas, NumPy), Power Query",
+    name: "Microsoft Fabric — Analytics, Data Engineering, AI",
     icon: correctPath("/images/logos/data.webp"),
   },
   {
-    name: "BI Developer ) — Power BI, Tableau, Google Data Studio, DAX",
+    name: "Power BI — Dashboards, DAX, Data Visualization",
     icon: correctPath("/images/logos/Power_BI.webp"),
   },
   {
-    name: "Python Developer -streamlit,spark Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn",
+    name: "Python — Pandas, NumPy, Streamlit, Scikit-Learn",
     icon: correctPath("/images/logos/python.svg"),
   },
   {
-    name: "Machine Learning — Scikit-Learn, TensorFlow, Keras, XGBoost, Feature Engineering",
-    icon: correctPath("/images/logos/ML.jpg"),
+    name: "SQL — Query Optimization, Data Extraction",
+    icon: correctPath("/images/logos/Sql.png"),
   },
   {
-    icon: correctPath("/images/logos/Sql.png"),
-    name: "SQL — MySQL, PostgreSQL, SQLite, BigQuery, Query Optimization",
+    name: "LLM & AI — Natural Language Querying, Integration",
+    icon: correctPath("/images/logos/ML.jpg"),
   },
 ];
 
 
 const expCards = [
   {
-    review: "Sofien Meftahi contributed to CNI as a Data Analyst Intern by collecting and cleaning administrative and system data to support national IT infrastructure. He automated data extraction and reporting processes using Python and SQL, and designed Power BI dashboards to visualize system performance and user activity, showcasing strong analytical and technical skills..",
+    review: "As an independent Freelance Microsoft Fabric Consultant, Sofien delivers enterprise-grade AI-powered analytics solutions. He specializes in LLM integration for natural language data querying, building intelligent dashboards, and helping clients leverage Microsoft Fabric for data-driven decision making.",
+    imgPath: correctPath("/images/exp3.png"),
+    logoPath: correctPath("/images/logo3.png"),
+    title: "Freelance Microsoft Fabric & AI Consultant",
+    date: "Jan 2026 – Present",
+    responsibilities: [
+      "Implement LLM integration for natural language data querying and AI-powered analytics.",
+      "Build enterprise-grade BI solutions using Microsoft Fabric and Power BI.",
+      "Deliver end-to-end data projects from ETL pipelines to interactive dashboards.",
+      "Help clients transform raw data into actionable business insights."
+    ],
+  },
+  {
+    review: "Sofien Meftahi’s contributions to the MajestEYE project were exceptional. From Final Year Project to Data Analyst Intern, he delivered outstanding work including economic/agricultural data analysis, ETL pipelines, geospatial dashboards, and predictive modeling.",
+    imgPath: correctPath("/images/exp2.png"),
+    logoPath: correctPath("/images/logo2.png"),
+    title: "MajestEYE – Final Year Project & Data Analyst Intern",
+    date: "Jan 2024 – Jan 2026",
+    responsibilities: [
+      "Final Year Project & Internship (Jan 2024 – May 2024): Gathered economic and agricultural datasets, built ETL pipelines, developed Power BI geospatial dashboards, and created population trend predictive models.",
+      "Continued Collaboration (Jui 2025 – Jan 2026): Extended project scope with advanced analytics."
+
+    ],
+    certificates: [
+      { label: "Internship Certificate", url: correctPath("") },
+      
+    ]
+  },
+  {
+    review: "Sofien Meftahi contributed to CNI as a Data Analyst Intern by collecting and cleaning administrative and system data to support national IT infrastructure. He automated data extraction and reporting processes using Python and SQL, and designed Power BI dashboards to visualize system performance and user activity, showcasing strong analytical and technical skills.",
     imgPath: correctPath("/images/exp1.png"),
     logoPath: correctPath("/images/logo1.png"),
     title: "CNI – Data Analyst Intern",
-    date: "Jul 2024 – Aug 2024",
+    date: "Jul 2023 – Nov 2023",
     responsibilities: [
       "Collected and cleaned administrative and system data to support national IT infrastructure.",
       "Automated data extraction and reporting using Python and SQL.",
       "Designed Power BI dashboards to visualize system performance and user activity."
     ],
-  },
-  {
-    review: "Sofien Meftahi’s contributions to the MajestEYE project during his Final Year Project and Data Analyst internship were exceptional. He effectively gathered and processed economic and agricultural datasets using Python, developing robust ETL pipelines to integrate data from multiple sources. He built an interactive geospatial dashboard in Power BI, providing actionable location-based insights, and created a predictive model for population trends , demonstrating strong analytical and problem-solving skills.",
-    imgPath: correctPath("/images/exp2.png"),
-    logoPath: correctPath("/images/logo2.png"),
-    title: "MajestEYE – Final Year Project / Data Analyst Intern",
-    date: "Feb 2024 – May 2024",
-    responsibilities: [
-      "Gathered economic and agricultural datasets using Python.",
-      "Developed ETL pipelines to integrate multi-source data.",
-      "Built a geospatial dashboard in Power BI for location-based insights.",
-      "Created a predictive model for population trends ."
-    ],
-    certificates: [
-      { label: "Internship Certificate", url: correctPath("/images/gitcert.png") },
-      { label: "Attestation de Stage", url: correctPath("/images/bi.png") }
-    ]
   },
 ];
 
@@ -229,38 +210,93 @@ const testimonials = [
   },
 ];
 
-// Certifications data: each card contains a certificate image
 const certifications = [
   {
-    title: "Github Foundation",
+    title: "Microsoft Certified: Fabric Analytics Engineer Associate (DP-600)",
+    shortTitle: "DP-600 • Microsoft Fabric",
+    issuer: "Microsoft",
+    description:
+      "Premium certification validating expertise in designing, building, and scaling enterprise-grade analytics solutions using Microsoft Fabric. Skilled in data engineering, data science, real-time analytics, and Power BI integration.",
+    imgPath: correctPath("/images/Dp600Certif.png"),
+    verifyUrl:
+      "https://learn.microsoft.com/en-us/users/sofienmeftahi-3482/credentials/c25aed162a575647",
+    credentialId: "C25AED162A575647",
+    accent: "from-cyan-400/30 via-blue-500/20 to-indigo-600/10",
+    featured: true,
+  },
+  {
+    title: "Oracle Cloud Infrastructure AI Foundations Associate",
+    shortTitle: "OCI AI Foundations",
+    issuer: "Oracle",
+    description:
+      "Foundational certification covering core AI concepts and Oracle Cloud Infrastructure AI services.",
+    imgPath: correctPath("/images/oracle_certif.png"),
+    verifyUrl:
+      "https://catalog-education.oracle.com/ords/certview/sharebadge?id=18279B43F22977C628A1799604C9981B39ED2E5AE455AF621D21E3E4BFC77CCD",
+    accent: "from-orange-500/20 via-amber-500/10 to-transparent",
+  },
+  {
+    title: "Alteryx Designer Core Certification",
+    shortTitle: "Designer Core",
+    issuer: "Alteryx",
+    description:
+      "Core certification validating hands-on workflow building, data preparation, blending, and analytics skills in Alteryx Designer.",
+    verifyUrl:
+      "https://www.credly.com/badges/57ddf09b-f1b1-413d-b824-fec139b146c2/linked_in_profile",
+    accent: "from-emerald-500/20 via-teal-500/10 to-transparent",
+  },
+  {
+    title: "GitHub Foundations",
+    shortTitle: "Foundations",
+    issuer: "GitHub",
+    description:
+      "Foundational certification covering repositories, commits, branching, Markdown, collaboration, and project management on GitHub.",
     imgPath: correctPath("/images/gitcert.png"),
+    verifyUrl:
+      "https://www.credly.com/badges/55efc350-edc3-4b0e-930c-2f9e9fe60d4b/linked_in_profile",
+    accent: "from-slate-400/20 via-zinc-400/10 to-transparent",
   },
   {
     title: "Google Business Intelligence",
+    shortTitle: "Business Intelligence",
+    issuer: "Google",
+    description:
+      "Coursera specialization covering BI fundamentals, data modeling, ETL workflows, dashboards, and stakeholder-focused reporting.",
     imgPath: correctPath("/images/bi.png"),
+    verifyUrl:
+      "https://www.coursera.org/account/accomplishments/specialization/certificate/W39BD285CJZN",
+    accent: "from-yellow-500/20 via-blue-500/10 to-transparent",
   },
-  {
-    title: "Python",
-    imgPath: correctPath("/images/py.png"),
-  },
-  {
-    title: "Master 1 Completion Certificat",
-    imgPath: correctPath("/images/master.jpg"),
-  },
-  {
-    title: "French Language Test",
-    imgPath: correctPath("/images/tcf.png"),
-  }
 ];
 
 const projects = [
+  {
+    id: "ai-insight-sofien-bank",
+    title: "AI-Insight Sofien Bank – AI-Powered Banking Analytics",
+    description: "Complete AI-powered banking analytics platform with Microsoft Fabric backend. Features include voice-enabled natural language querying, AI credit decision engine, real-time dashboards, transaction trend analysis, customer segmentation, and comprehensive credit risk assessment.",
+    imgPath:  correctPath("/images/pie chart.png"),
+    alt: "AI-Insight Sofien Bank",
+    featured: true,
+    images: [
+      correctPath("/images/a1.png"),
+      correctPath("/images/sign_in.png"),
+      correctPath("/images/chart1_top10.png"),
+      correctPath("/images/pie chart.png"),
+      correctPath("/images/credit_approve.png")
+    ],
+    technologies: ["Microsoft Fabric", "LLM", "Python", "SQL", "React", "AI Credit Scoring", "Voice Recognition", "Real-time Analytics"],
+    links: [
+      { label: "GitHub", url: "https://github.com/sofienmeftahi/AI-Insight-Sofien-Bank" },
+      { label: "Drive vedio", url: "https://drive.google.com/file/d/1hPetmbqLwuwW59vVOFQiuUlILPyRWr1M/view?usp=sharing" }
+    ]
+  },
   {
     id: "ryde",
     title: "Socioeconomic Population Analysis & Interactive Dashboard",
     description: "Conducted an in-depth analysis of socioeconomic population data to identify key trends and patterns. Designed and implemented an interactive dashboard that visualizes demographics, income levels, and social indicators, enabling data-driven insights for decision-making.",
     imgPath: correctPath("/images/project1.png"),
     alt: "Ryde App Interface",
-    featured: true,
+    featured: false,
     images: [
       correctPath("/images/X1.png"),
       correctPath("/images/X2.png"),    
@@ -273,23 +309,26 @@ const projects = [
     ]
   },
   {
-    id: "project6",
-    title: "Used Car Sales Performance Dashboard",
-    description: "An interactive Power BI dashboard designed to analyze used car sales data. It provides insights into key metrics such as total revenue, average selling price, top-performing car models, and regional sales trends. The dashboard helps identify market patterns and supports data-driven decisions for inventory and pricing strategies.",
-    imgPath: correctPath("/images/car11.png"),
-    alt: "Used Car Sales Performance Dashboard",
-    featured: false,
+    id: "logistics-ai-copilot",
+    title: "AI-Powered Logistics Analytics Platform",
+    description: "End-to-end analytics workspace for logistics and operations: natural-language questions are interpreted by an AI layer, translated into read-only SQL, executed against Microsoft Fabric as the system of record, and returned with business-facing commentary, confidence signals, and fit-for-purpose charts. The same foundation supports a visual analytics builder (dimensions, measures, aggregations, generated SQL) for users who prefer structured exploration without prompts. Includes secure authentication, a modern web UI, and API orchestration across multiple LLM providers with emphasis on governance, SQL safety, and traceability.",
+    imgPath: correctPath("/images/b4.jpg"),
+    alt: "AI-Powered Logistics Analytics Platform",
+    featured: true,
     images: [
-      correctPath("/images/car11.png"),
-      correctPath("/images/car22.png")
+      correctPath("/images/b2.jpg"),
+      correctPath("/images/b3.jpg"),
+      correctPath("/images/b4.jpg"),
+      correctPath("/images/b5.png"),
+      correctPath("/images/b6.png")
     ],
-    technologies: ["Power BI", "Python", "SQL"],
+    technologies: ["Microsoft Fabric", "LLM", "Python", "SQL", "React", "AI Analytics", "API Orchestration", "SQL Safety", "Governance"],
     links: [
-      { label: "Live Demo", url: "#" },
       { label: "GitHub", url: "#" }
     ]
   },
-  {
+
+{
     id: "socio-subproject",
     title: "Tunisia Dams Live Monitoring Dashboard",
     description: "A real-time Power BI dashboard visualizing water levels and capacities across Tunisia’s major dams. The dashboard provides live updates, interactive visuals, and key insights into national water resources to support environmental analysis and decision-making.",
@@ -306,6 +345,63 @@ const projects = [
       { label: "GitHub", url: "#" }
     ]
   },
+
+
+{
+    id: "project4",
+    title: "Manufacturing Machine Performance & Waste Analysis",
+    description: "Developed a data analysis project to monitor machine performance in a manufacturing plant. The system tracks breakdowns, calculates waste vs. valid output, and provides insights into efficiency and productivity through interactive dashboards.",
+    imgPath: correctPath("/images/project5of.png"),
+    alt: "Manufacturing Machine Performance & Waste Analysis",
+    featured: false,
+    images: [
+      correctPath("/images/y1.png"),
+      correctPath("/images/y2.png"),
+      correctPath("/images/y3.png")
+    ],
+    technologies: ["PowerBI", "SQL", "Python","Excel"],
+    links: [
+      { label: "Live Demo", url: "https://app.powerbi.com/reportEmbed?reportId=2b66f27d-6e29-46e8-8e88-88e02e99e5bc&autoAuth=true&ctid=dbd6664d-4eb9-46e8-8e88-88e02e99e5bc" },
+      { label: "GitHub", url: "#" }
+    ]
+  },
+  {
+    id: "project5",
+    title: "Human Resources Data Analysis for Corporate Insights",
+    description: "An advanced social media analytics platform that provides insights into engagement, reach, and performance metrics across multiple platforms.",
+    imgPath: correctPath("/images/project6of.png"),
+    alt: "Social Media Analytics Tool",
+    featured: false,
+    images: [
+      correctPath("/images/z1.png"),
+      correctPath("/images/z2.png"),
+      correctPath("/images/z3.png")
+    ],
+    technologies: ["Power Bi ", "Python"],
+    links: [
+      { label: "Live Demo", url: "https://app.powerbi.com/reportEmbed?reportId=06c47dd0-c4f9-4a84-b33b-1b4be533a42b&autoAuth=true&ctid=dbd6664d-4eb9-46eb-99d8-5c43ba153c61" },
+      { label: "GitHub", url: "#" }
+    ]
+  },
+
+{
+    id: "project6",
+    title: "Used Car Sales Performance Dashboard",
+    description: "An interactive Power BI dashboard designed to analyze used car sales data. It provides insights into key metrics such as total revenue, average selling price, top-performing car models, and regional sales trends. The dashboard helps identify market patterns and supports data-driven decisions for inventory and pricing strategies.",
+    imgPath: correctPath("/images/car11.png"),
+    alt: "Used Car Sales Performance Dashboard",
+    featured: false,
+    images: [
+      correctPath("/images/car11.png"),
+      correctPath("/images/car22.png")
+    ],
+    technologies: ["Power BI", "Python", "SQL"],
+    links: [
+      { label: "Live Demo", url: "#" },
+      { label: "GitHub", url: "#" }
+    ]
+  },
+  
   
   {
     id: "library",
@@ -343,42 +439,13 @@ const projects = [
       { label: "GitHub", url: "https://github.com/sofienmeftahi/BMW-Car-Sales-Dashboard" }
     ]
   },
-  {
-    id: "project4",
-    title: "Manufacturing Machine Performance & Waste Analysis",
-    description: "Developed a data analysis project to monitor machine performance in a manufacturing plant. The system tracks breakdowns, calculates waste vs. valid output, and provides insights into efficiency and productivity through interactive dashboards.",
-    imgPath: correctPath("/images/project5of.png"),
-    alt: "Manufacturing Machine Performance & Waste Analysis",
-    featured: false,
-    images: [
-      correctPath("/images/y1.png"),
-      correctPath("/images/y2.png"),
-      correctPath("/images/y3.png")
-    ],
-    technologies: ["PowerBI", "SQL", "Python","Excel"],
-    links: [
-      { label: "Live Demo", url: "https://app.powerbi.com/reportEmbed?reportId=2b66f27d-6e29-46e8-8e88-88e02e99e5bc&autoAuth=true&ctid=dbd6664d-4eb9-46e8-8e88-88e02e99e5bc" },
-      { label: "GitHub", url: "#" }
-    ]
-  },
-  {
-    id: "project5",
-    title: "Human Resources Data Analysis for Corporate Insights",
-    description: "An advanced social media analytics platform that provides insights into engagement, reach, and performance metrics across multiple platforms.",
-    imgPath: correctPath("/images/project6of.png"),
-    alt: "Social Media Analytics Tool",
-    featured: false,
-    images: [
-      correctPath("/images/z1.png"),
-      correctPath("/images/z2.png"),
-      correctPath("/images/z3.png")
-    ],
-    technologies: ["Power Bi ", "Python"],
-    links: [
-      { label: "Live Demo", url: "https://app.powerbi.com/reportEmbed?reportId=06c47dd0-c4f9-4a84-b33b-1b4be533a42b&autoAuth=true&ctid=dbd6664d-4eb9-46eb-99d8-5c43ba153c61" },
-      { label: "GitHub", url: "#" }
-    ]
-  },
+  
+
+  
+
+
+
+
   {
     id: "project7",
     title: "TCF Quiz — Test de Connaissance du Français",
@@ -404,20 +471,21 @@ const socialImgs = [
     name: "github",
     imgPath: correctPath("/images/github.png"),
     url: "https://github.com/sofienmeftahi"
-      
-  },
-  {
-    name: "fb",
-    imgPath: correctPath("/images/fb.png"),
-  },
-  {
-    name: "x",
-    imgPath: correctPath("/images/x.png"),
   },
   {
     name: "linkedin",
     imgPath: correctPath("/images/linkedin.png"),
     url: "https://www.linkedin.com/in/sofien-meftahi/"
+  },
+  {
+    name: "fb",
+    imgPath: correctPath("/images/fb.png"),
+    url: "#"
+  },
+  {
+    name: "x",
+    imgPath: correctPath("/images/x.png"),
+    url: "#"
   },
 ];
 
