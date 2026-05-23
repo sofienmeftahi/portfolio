@@ -37,7 +37,10 @@ const HeroExperience = () => {
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
 
   return (
-    <Canvas camera={{ position: [0, 0, 15], fov: 50 }}>
+    <Canvas 
+      camera={{ position: [0, 0, 15], fov: 50 }}
+      style={{ pointerEvents: 'auto', touchAction: 'pan-y' }}
+    >
       <color attach="background" args={["#020617"]} />
       <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
       
@@ -49,11 +52,12 @@ const HeroExperience = () => {
       <OrbitControls
         enablePan={false}
         enableZoom={!isTablet}
+        enableRotate={!isMobile}
         maxDistance={25}
         minDistance={8}
         minPolarAngle={Math.PI / 6}
         maxPolarAngle={Math.PI / 2.2}
-        autoRotate
+        autoRotate={!isMobile}
         autoRotateSpeed={0.5}
       />
 
